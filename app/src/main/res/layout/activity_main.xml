@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/answerDisplay"
+        android:layout_width="278dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="160dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="270dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="348dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/seven"
+            android:layout_width="61dp"
+            android:layout_height="48dp"
+            android:onClick="numberClick"
+            android:text="7"
+            app:layout_constraintEnd_toStartOf="@+id/eight"
+            app:layout_constraintTop_toBottomOf="@+id/AC"/>
+
+        <Button
+            android:id="@+id/eight"
+            android:layout_width="61dp"
+            android:layout_height="48dp"
+            android:onClick="numberClick"
+            android:text="8"
+            app:layout_constraintEnd_toStartOf="@+id/nine"
+            tools:layout_editor_absoluteY="366dp" />
+
+        <Button
+            android:id="@+id/nine"
+            android:layout_width="61dp"
+            android:layout_height="48dp"
+            android:onClick="numberClick"
+            android:text="9"
+            app:layout_constraintTop_toBottomOf="@+id/percent"
+            tools:layout_editor_absoluteX="201dp" />
+
+        <Button
+            android:id="@+id/multiply"
+            android:layout_width="61dp"
+            android:layout_height="48dp"
+            android:onClick="operatorClick"
+            android:contentDescription="x"
+            android:text="*"
+            app:layout_constraintStart_toEndOf="@+id/nine"
+            app:layout_constraintTop_toBottomOf="@+id/division" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="265dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="280dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/AC"
+            android:layout_width="61dp"
+            android:layout_height="48dp"
+            android:onClick="acButton"
+            android:text="AC"
+            tools:layout_editor_absoluteX="79dp"
+            tools:layout_editor_absoluteY="318dp" />
+
+        <Button
+            android:id="@+id/percent"
+            android:layout_width="61dp"
+            android:layout_height="48dp"
+            android:onClick="specialClick"
+            android:text="%"
+            tools:layout_editor_absoluteX="201dp"
+            tools:layout_editor_absoluteY="318dp" />
+
+        <Button
+            android:id="@+id/division"
+            android:layout_width="61dp"
+            android:layout_height="48dp"
+            android:onClick="operatorClick"
+            android:text="/"
+            app:layout_constraintStart_toEndOf="@+id/percent"
+            tools:layout_editor_absoluteY="318dp" />
+
+        <Button
+            android:id="@+id/pos-neg"
+            android:layout_width="61dp"
+            android:layout_height="48dp"
+            android:onClick="specialClick"
+            android:text="+/-"
+            app:layout_constraintEnd_toStartOf="@+id/percent"
+            app:layout_constraintStart_toEndOf="@+id/AC"
+            tools:layout_editor_absoluteY="318dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="265dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="544dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/zero"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:onClick="numberClick"
+            android:text="0"
+            app:layout_constraintEnd_toStartOf="@+id/decimal"
+            tools:layout_editor_absoluteY="513dp" />
+
+        <Button
+            android:id="@+id/decimal"
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:onClick="numberClick"
+            android:text="."
+            app:layout_constraintTop_toBottomOf="@+id/three"
+            tools:layout_editor_absoluteX="201dp" />
+
+        <Button
+            android:id="@+id/equal"
+            android:layout_width="62dp"
+            android:layout_height="48dp"
+            android:onClick="equalClick"
+            android:text="="
+            app:layout_constraintStart_toEndOf="@+id/decimal"
+            app:layout_constraintTop_toBottomOf="@+id/addition" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="268dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="416dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/four"
+            android:layout_width="61dp"
+            android:layout_height="48dp"
+            android:onClick="numberClick"
+            android:text="4"
+            app:layout_constraintEnd_toStartOf="@+id/five"
+            app:layout_constraintTop_toBottomOf="@+id/seven" />
+
+        <Button
+            android:id="@+id/five"
+            android:layout_width="61dp"
+            android:layout_height="48dp"
+            android:onClick="numberClick"
+            android:text="5"
+            app:layout_constraintEnd_toStartOf="@+id/six"
+            app:layout_constraintTop_toBottomOf="@+id/eight" />
+
+        <Button
+            android:id="@+id/six"
+            android:layout_width="61dp"
+            android:layout_height="48dp"
+            android:onClick="numberClick"
+            android:text="6"
+            app:layout_constraintTop_toBottomOf="@+id/nine"
+            tools:layout_editor_absoluteX="201dp" />
+
+
+        <Button
+            android:id="@+id/negative"
+            android:layout_width="61dp"
+            android:layout_height="48dp"
+            android:onClick="operatorClick"
+            android:text="-"
+            app:layout_constraintStart_toEndOf="@+id/six"
+            app:layout_constraintTop_toBottomOf="@+id/multiply" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="262dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="484dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/one"
+            android:layout_width="61dp"
+            android:layout_height="48dp"
+            android:onClick="numberClick"
+            android:text="1"
+            app:layout_constraintEnd_toStartOf="@+id/two"
+            app:layout_constraintTop_toBottomOf="@+id/four" />
+
+        <Button
+            android:id="@+id/two"
+            android:layout_width="61dp"
+            android:layout_height="48dp"
+            android:onClick="numberClick"
+            android:text="2"
+            app:layout_constraintEnd_toStartOf="@+id/three"
+            app:layout_constraintTop_toBottomOf="@+id/five" />
+
+        <Button
+            android:id="@+id/three"
+            android:layout_width="61dp"
+            android:layout_height="48dp"
+            android:onClick="numberClick"
+            android:text="3"
+            app:layout_constraintTop_toBottomOf="@+id/six"
+            tools:layout_editor_absoluteX="201dp" />
+
+        <Button
+            android:id="@+id/addition"
+            android:layout_width="61dp"
+            android:layout_height="48dp"
+            android:onClick="operatorClick"
+            android:text="+"
+            app:layout_constraintStart_toEndOf="@+id/three"
+            app:layout_constraintTop_toBottomOf="@+id/negative" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/equationDisplay"
+        android:layout_width="281dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="73dp"
+        android:text="TextView"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
